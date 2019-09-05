@@ -25,26 +25,27 @@
     <script src="script.js" charset="utf-8"></script>
     <!-- IMG: ICON -->
     <link rel="shortcut icon" href="img/me_icon.gif">
-    <title>MyFirst PHP Project</title>
+    <title>Volume of parallelepiped</title>
 
     <?php 
-        $hello = "Hello world!";
 
-        $myArr = ["ciap", "mamma", "addio"];
+        //Parametro Lunghezza in entrata
+        $len = $_GET["len"];
+
+        //Parametro larghezza in entrata
+        $wid = $_GET["wid"];
+
+        //Parametro altezza in entrata
+        $hei = $_GET["hei"];
+
+        //Calcolo del volume
+        $volume = ($len * $wid) * $hei;
+
     ?>
     
   </head>
   <body>
-  <h1> 
-  <?php
-  echo($hello ."<br>");
-  echo($myArr ."<br>");
-
-  var_dump($hello);
-  echo("<br>");
-  var_dump($myArr);
-  ?>
-   </h1>
+  <h1>Volume calcolato in base ai parametri in entrata: <?php echo($volume) ?> cm3</h1>
 
   
   </body>
